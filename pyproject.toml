@@ -1,0 +1,87 @@
+[build-system]
+
+requires = ["setuptools>=61.0"]
+
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python_course_1" #just the name, as in files
+version = "0.0.1" #minimal because we sre starting
+description = "python course development"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+
+    {name = "marekkosciesza-toml", email = "268678491+marekkosciesza-alt@users.noreply.github.coml"},
+
+]
+
+keywords = ["neuroscience", "ecology", "dash", "data-visualization", "data-analysis"]
+
+classifiers = [
+
+    "Programming Language :: Python :: 3",
+
+    "Operating System :: OS Independent",
+
+    "Intended Audience :: Science/Research",
+
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+
+    "Topic :: Scientific/Engineering :: Visualization",
+
+]
+
+
+dependencies = [ #also on what version of other software it runs, we assume that our code can work on latest software, but id not always works like that
+
+    "ipykernel",
+
+    "numpy",
+
+    "plotly",
+
+    "polars",
+
+    "scipy",
+
+    "kaleido",
+
+]
+
+
+[project.urls]
+
+Homepage = "https://github.com/marekkosciesza-alt/Python_course_1"
+
+Issues = "https://github.com/marekkosciesza-alt/Python_course_1/issues"
+
+
+[tool.setuptools]
+
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+
+where = ["."]
+
+include = ["src*"]
+
+namespaces = true
+
+
+[tool.ruff]
+
+line-length = 100
+
+
+[tool.ruff.format]
+
+quote-style = "double"
+
+indent-style = "tab"
+
+
+docstring-code-format = true
